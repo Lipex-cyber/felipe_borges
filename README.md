@@ -1,4 +1,4 @@
-💻 Felipe Borges | Desenvolvimento de Sites Profissionais
+💻 FB CODE & DESIGN | Desenvolvimento de Sites Profissionais
 
 Site institucional desenvolvido para apresentação e venda de serviços de criação de sites profissionais, responsivos e modernos.
 
