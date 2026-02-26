@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felipe Borges | Desenvolvedor Web</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h2 class="logo">FB - CODE & DESIGN</h2>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Seu site com a sua essência!</h1>
+    <p>Criação de sites modernos, estratégicos e altamente responsivos.</p>
+    <a href="#contato" class="btn">Solicitar Orçamento</a>
+  </div>
+</section>
+
+<section id="sobre" class="section">
+  <h2>Sobre Mim</h2>
+  <br>
+  <p>Desenvolvedor Front-End focado em design moderno, performance e adaptação para WEB e MOBILE.
+  <br> Criando experiências digitais que destacam sua marca ou seu perfil no mercado.</p>
+</section>
+
+<section id="servicos" class="section">
+  <h2>Serviços</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Landing Pages</h3>
+      <p>Páginas estratégicas que convertem visitantes em clientes.</p>
+    </div>
+    <div class="card">
+      <h3>Sites Institucionais</h3>
+      <p>Presença digital profissional e impactante.</p>
+    </div>
+    <div class="card">
+      <h3>E-commerce</h3>
+      <p>Lojas virtuais modernas e otimizadas para vendas.</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="section">
+  <h2>Portfólio</h2>
+  <div class="portfolio-grid">
+    
+    <div class="portfolio-item">
+      <img src="images/projeto1.png" alt="Projeto 1">
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/projeto2.png" alt="Projeto 2">
+    </div>
+
+    <div class="portfolio-item">
+      <img src="images/projeto3.png" alt="Projeto 3">
+    </div>
+
+  </div>
+</section>
+
+<section id="contato" class="cta">
+  <h2>Vamos criar seu projeto?</h2>
+  <br><br>
+  <a href="#" class="btn-dark" id="openModal">Fale Comigo</a>
+</section>
+
+<footer>
+  <p>© 2026 Felipe Borges - Todos os direitos reservados</p>
+</footer>
+
+<!-- Modal Contato -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Entre em Contato</h2>
+
+    <div class="contact-links">
+      <a href="https://wa.me/5551996048894" target="_blank">WhatsApp</a>
+      <a href="https://instagram.com/lipexcyber" target="_blank">Instagram</a>
+      <a href="mailto:felipecamposborgesinf@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/felipe-campos-borges-7ba6b517b/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<!-- Fundo de partículas -->v
+<div id="particles-js"></div>
+
+<!-- Biblioteca Particles -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    color: { value: "#38bdf8" },
+    shape: { type: "circle" },
+    opacity: { value: 0.7 },
+    size: { value: 4 },
+    line_linked: {
+      enable: true,
+      distance: 170,
+      color: "#0ea5e9",
+      opacity: 0.6,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2.5
+    }
+  },
+  interactivity: {
+    events: {
+      onhover: { enable: true, mode: "repulse" },
+      onclick: { enable: true, mode: "push" }
+    }
+  },
+  retina_detect: true
+});
+</script>
+
+<!--JS Botão-->
+<script>
+const modal = document.getElementById("contactModal");
+const btn = document.getElementById("openModal");
+const closeBtn = document.querySelector(".close");
+
+btn.onclick = function(e) {
+  e.preventDefault();
+  modal.style.display = "flex";
+}
+
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(e) {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
