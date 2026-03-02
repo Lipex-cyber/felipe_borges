@@ -58,16 +58,32 @@
   <h2>Portfólio</h2>
   <div class="portfolio-grid">
     
-    <div class="portfolio-item">
+    <div class="portfolio-item" 
+         data-img="images/projeto1.png"
+         data-title="Site Institucional"
+         data-desc="Site profissional para seu perfil no mercado, com apresentação de habilidades, identidade visual forte e navegação intuitiva.">
       <img src="images/projeto1.png" alt="Projeto 1">
     </div>
 
-    <div class="portfolio-item">
+    <div class="portfolio-item"
+         data-img="images/projeto2.png"
+         data-title="E-commerce Moderno"
+         data-desc="Loja virtual responsiva e otimizada para vendas, com foco na experiência do cliente.">
       <img src="images/projeto2.png" alt="Projeto 2">
     </div>
 
-    <div class="portfolio-item">
+    <div class="portfolio-item"
+         data-img="images/projeto3.png"
+         data-title="Administração na WEB"
+         data-desc="Site com sistema completo de administração para sua organização financeira, social ou profissional. Com Objetivo de facilitar sua rotina!">
       <img src="images/projeto3.png" alt="Projeto 3">
+    </div>
+
+    <div class="portfolio-item"
+         data-img="images/projeto4.png"
+         data-title="Projeto Empresarial"
+         data-desc="Website desenvolvido sob medida para representar da melhor forma seu empreendimento, alinhando performance, design e identidade da marca.">
+      <img src="images/projeto4.png" alt="Projeto 4">
     </div>
 
   </div>
@@ -97,6 +113,19 @@
     </div>
   </div>
 </div>
+
+
+<!-- Modal Portfolio -->
+<div id="portfolioModal" class="modal">
+  <div class="modal-content portfolio-modal">
+    <span class="closePortfolio">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<!-- JS -->
 
 <!-- Fundo de partículas -->
 <div id="particles-js"></div>
@@ -154,6 +183,35 @@ window.onclick = function(e) {
     modal.style.display = "none";
   }
 }
+</script>
+
+<!--JS Modal Portfolio-->
+<script>
+const portfolioItems = document.querySelectorAll(".portfolio-item");
+const portfolioModal = document.getElementById("portfolioModal");
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDesc");
+const closePortfolio = document.querySelector(".closePortfolio");
+
+portfolioItems.forEach(item => {
+  item.addEventListener("click", () => {
+    modalImage.src = item.getAttribute("data-img");
+    modalTitle.textContent = item.getAttribute("data-title");
+    modalDesc.textContent = item.getAttribute("data-desc");
+    portfolioModal.style.display = "flex";
+  });
+});
+
+closePortfolio.onclick = function() {
+  portfolioModal.style.display = "none";
+}
+
+window.addEventListener("click", function(e) {
+  if (e.target == portfolioModal) {
+    portfolioModal.style.display = "none";
+  }
+});
 </script>
 
 </body>
