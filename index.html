@@ -5,13 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Felipe Borges | Desenvolvedor Web</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="grid-lines"></div>
+<div id="particles-js"></div>
+
 <header>
   <div class="container">
-    <h2 class="logo">FB - CODE & DESIGN</h2>
+    <h2 class="logo">FB<span> / </span>CODE & DESIGN</h2>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
@@ -22,81 +27,115 @@
 </header>
 
 <section class="hero">
+  <div class="hero-glow"></div>
   <div class="hero-content">
-    <h1>Seu site com a sua essência!</h1>
-    <p>Criação de sites modernos, estratégicos e altamente responsivos.</p>
-    <a href="#contato" class="btn">Solicitar Orçamento</a>
+    <div class="hero-tag">
+      <span class="hero-tag-dot"></span>
+      Disponível para projetos
+    </div>
+    <h1>Seu site com<br><em>a sua essência!</em></h1>
+    <p>Criação de sites modernos, estratégicos e altamente responsivos — experiências digitais que destacam sua marca.</p>
+    <a href="#" class="btn" id="openModal">Solicitar Orçamento →</a>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    scroll
   </div>
 </section>
 
+<div class="skills-strip">
+  <div class="skills-track">
+    <span><b>01</b> HTML & CSS</span>
+    <span><b>02</b> JavaScript</span>
+    <span><b>03</b> React</span>
+    <span><b>04</b> Responsive Design</span>
+    <span><b>05</b> UI / UX</span>
+    <span><b>06</b> Performance</span>
+    <span><b>07</b> SEO</span>
+    <span><b>08</b> Landing Pages</span>
+    <span><b>01</b> HTML & CSS</span>
+    <span><b>02</b> JavaScript</span>
+    <span><b>03</b> React</span>
+    <span><b>04</b> Responsive Design</span>
+    <span><b>05</b> UI / UX</span>
+    <span><b>06</b> Performance</span>
+    <span><b>07</b> SEO</span>
+    <span><b>08</b> Landing Pages</span>
+  </div>
+</div>
+
 <section id="sobre" class="section">
-  <h2>Sobre Mim</h2>
-  <br>
-  <p>Desenvolvedor Front-End focado em design moderno, performance e adaptação para WEB e MOBILE.
-  <br> Criando experiências digitais que destacam sua marca ou seu perfil no mercado.</p>
+  <div class="section-label">Sobre mim</div>
+  <h2>Desenvolvedor Front-End<br>focado em resultados</h2>
+  <div class="about-wrapper">
+    <div class="about-text reveal">
+      <p>Sou <strong>Felipe Borges</strong>, Desenvolvedor Front-End com foco em design moderno, performance e adaptação para <strong>WEB e MOBILE</strong>.<br><br>Crio experiências digitais que destacam sua marca ou perfil no mercado — unindo código limpo com visual impactante para que cada projeto entregue resultados reais.</p>
+    </div>
+    <div class="about-stats reveal">
+      <div class="stat-box"><div class="num">10+</div><div class="lbl">Projetos entregues</div></div>
+      <div class="stat-box"><div class="num">100%</div><div class="lbl">Responsivos</div></div>
+      <div class="stat-box"><div class="num">3+</div><div class="lbl">Anos de experiência</div></div>
+      <div class="stat-box"><div class="num">∞</div><div class="lbl">Suporte pós-entrega</div></div>
+    </div>
+  </div>
 </section>
 
 <section id="servicos" class="section">
+  <div class="section-label">O que eu faço</div>
   <h2>Serviços</h2>
   <div class="cards">
-    <div class="card">
+    <div class="card reveal">
+      <div class="card-icon">🎯</div>
       <h3>Landing Pages</h3>
-      <p>Páginas estratégicas que convertem visitantes em clientes.</p>
+      <p>Páginas estratégicas e focadas em conversão que transformam visitantes em clientes reais.</p>
     </div>
-    <div class="card">
+    <div class="card reveal">
+      <div class="card-icon">🏢</div>
       <h3>Sites Institucionais</h3>
-      <p>Presença digital profissional e impactante.</p>
+      <p>Presença digital profissional e impactante que representa sua empresa com credibilidade.</p>
     </div>
-    <div class="card">
+    <div class="card reveal">
+      <div class="card-icon">🛒</div>
       <h3>E-commerce</h3>
-      <p>Lojas virtuais modernas e otimizadas para vendas.</p>
+      <p>Lojas virtuais modernas, otimizadas para vendas e com excelente experiência de compra.</p>
     </div>
   </div>
 </section>
 
 <section id="portfolio" class="section">
+  <div class="section-label">Trabalhos</div>
   <h2>Portfólio</h2>
   <div class="portfolio-grid">
-    
-    <div class="portfolio-item" 
-         data-img="images/projeto1.png"
-         data-title="Site Institucional"
-         data-desc="Site profissional para seu perfil no mercado, com apresentação de habilidades, identidade visual forte e navegação intuitiva.">
-      <img src="images/projeto1.png" alt="Projeto 1">
+    <div class="portfolio-item reveal" data-img="images/projeto1.png" data-title="Site Institucional" data-desc="Site profissional para seu perfil no mercado, com apresentação de habilidades, identidade visual forte e navegação intuitiva.">
+      <img src="images/projeto1.png" alt="Site Institucional">
+      <div class="portfolio-overlay"><div><h4>Site Institucional</h4><p>Ver projeto →</p></div></div>
     </div>
-
-    <div class="portfolio-item"
-         data-img="images/projeto2.png"
-         data-title="E-commerce Moderno"
-         data-desc="Loja virtual responsiva e otimizada para vendas, com foco na experiência do cliente.">
-      <img src="images/projeto2.png" alt="Projeto 2">
+    <div class="portfolio-item reveal" data-img="images/projeto2.png" data-title="E-commerce Moderno" data-desc="Loja virtual responsiva e otimizada para vendas, com foco na experiência do cliente.">
+      <img src="images/projeto2.png" alt="E-commerce Moderno">
+      <div class="portfolio-overlay"><div><h4>E-commerce Moderno</h4><p>Ver projeto →</p></div></div>
     </div>
-
-    <div class="portfolio-item"
-         data-img="images/projeto3.png"
-         data-title="Administração na WEB"
-         data-desc="Site com sistema completo de administração para sua organização financeira, social ou profissional. Com Objetivo de facilitar sua rotina!">
-      <img src="images/projeto3.png" alt="Projeto 3">
+    <div class="portfolio-item reveal" data-img="images/projeto3.png" data-title="Administração na WEB" data-desc="Site com sistema completo de administração para sua organização financeira, social ou profissional — com objetivo de facilitar sua rotina!">
+      <img src="images/projeto3.png" alt="Administração na WEB">
+      <div class="portfolio-overlay"><div><h4>Administração na WEB</h4><p>Ver projeto →</p></div></div>
     </div>
-
-    <div class="portfolio-item"
-         data-img="images/projeto4.png"
-         data-title="Projeto Empresarial"
-         data-desc="Website desenvolvido sob medida para representar da melhor forma seu empreendimento, alinhando performance, design e identidade da marca.">
-      <img src="images/projeto4.png" alt="Projeto 4">
+    <div class="portfolio-item reveal" data-img="images/projeto4.png" data-title="Projeto Empresarial" data-desc="Website desenvolvido sob medida para representar da melhor forma seu empreendimento, alinhando performance, design e identidade da marca.">
+      <img src="images/projeto4.png" alt="Projeto Empresarial">
+      <div class="portfolio-overlay"><div><h4>Projeto Empresarial</h4><p>Ver projeto →</p></div></div>
     </div>
-
   </div>
 </section>
 
 <section id="contato" class="cta">
+  <div class="cta-glow"></div>
+  <div class="section-label" style="justify-content:center">Próximo passo</div>
   <h2>Vamos criar seu projeto?</h2>
-  <br><br>
-  <a href="#" class="btn-dark" id="openModal">Fale Comigo</a>
+  <p>Transforme sua ideia em um site que converte. Orçamento sem compromisso.</p>
+  <a href="#" class="btn-dark" id="openModal2">Fale Comigo →</a>
 </section>
 
 <footer>
-  <p>© 2026 Felipe Borges - Todos os direitos reservados</p>
+  <p>© 2026 Felipe Borges — Todos os direitos reservados</p>
+  <div class="footer-dot"></div>
 </footer>
 
 <!-- Modal Contato -->
@@ -104,114 +143,305 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>Entre em Contato</h2>
-
+    <p class="modal-subtitle">Escolha seu canal preferido</p>
     <div class="contact-links">
-      <a href="https://wa.me/5551996048894" target="_blank">WhatsApp</a>
-      <a href="https://instagram.com/lipexcyber" target="_blank">Instagram</a>
-      <a href="mailto:felipecamposborgesinf@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/felipe-campos-borges-7ba6b517b/" target="_blank">LinkedIn</a>
+      <a href="https://wa.me/5551996048894" target="_blank"><span class="link-icon">💬</span> WhatsApp</a>
+      <a href="https://instagram.com/lipexcyber" target="_blank"><span class="link-icon">📸</span> Instagram</a>
+      <a href="mailto:felipecamposborgesinf@gmail.com"><span class="link-icon">✉️</span> E-mail</a>
+      <a href="https://www.linkedin.com/in/felipe-campos-borges-7ba6b517b/" target="_blank"><span class="link-icon">💼</span> LinkedIn</a>
     </div>
   </div>
 </div>
-
 
 <!-- Modal Portfolio -->
 <div id="portfolioModal" class="modal">
   <div class="modal-content portfolio-modal">
     <span class="closePortfolio">&times;</span>
     <img id="modalImage" src="" alt="">
-    <h3 id="modalTitle"></h3>
-    <p id="modalDesc"></p>
+    <div class="portfolio-modal-body">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
   </div>
 </div>
 
-<!-- JS -->
-
-<!-- Fundo de partículas -->
-<div id="particles-js"></div>
-
-<!-- Biblioteca Particles -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+particlesJS("particles-js",{particles:{number:{value:55},color:{value:"#00e5ff"},shape:{type:"circle"},opacity:{value:.4},size:{value:2},line_linked:{enable:true,distance:160,color:"#00e5ff",opacity:.1,width:1},move:{enable:true,speed:1.2}},interactivity:{events:{onhover:{enable:true,mode:"repulse"},onclick:{enable:true,mode:"push"}}},retina_detect:true});
+</script>
 
 <script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80 },
-    color: { value: "#38bdf8" },
-    shape: { type: "circle" },
-    opacity: { value: 0.7 },
-    size: { value: 4 },
-    line_linked: {
-      enable: true,
-      distance: 170,
-      color: "#0ea5e9",
-      opacity: 0.6,
-      width: 1
-    },
-    move: {
-      enable: true,
-      speed: 2.5
-    }
-  },
-  interactivity: {
-    events: {
-      onhover: { enable: true, mode: "repulse" },
-      onclick: { enable: true, mode: "push" }
-    }
-  },
-  retina_detect: true
+// Cursor
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function animCursor(){
+  cur.style.left=mx+'px';cur.style.top=my+'px';
+  rx+=(mx-rx)*.14;ry+=(my-ry)*.14;
+  ring.style.left=rx+'px';ring.style.top=ry+'px';
+  requestAnimationFrame(animCursor);
+})();
+document.querySelectorAll('a,button,.portfolio-item,.card,.stat-box').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='16px';cur.style.height='16px';ring.style.width='48px';ring.style.height='48px';ring.style.opacity='.85';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='34px';ring.style.height='34px';ring.style.opacity='.5';});
 });
 </script>
 
-<!--JS Botão-->
 <script>
-const modal = document.getElementById("contactModal");
-const btn = document.getElementById("openModal");
-const closeBtn = document.querySelector(".close");
-
-btn.onclick = function(e) {
-  e.preventDefault();
-  modal.style.display = "flex";
-}
-
-closeBtn.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(e) {
-  if (e.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// Scroll reveal
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 
-<!--JS Modal Portfolio-->
 <script>
-const portfolioItems = document.querySelectorAll(".portfolio-item");
-const portfolioModal = document.getElementById("portfolioModal");
-const modalImage = document.getElementById("modalImage");
-const modalTitle = document.getElementById("modalTitle");
-const modalDesc = document.getElementById("modalDesc");
-const closePortfolio = document.querySelector(".closePortfolio");
+// Modal contato
+const modal=document.getElementById("contactModal");
+[document.getElementById("openModal"),document.getElementById("openModal2")].forEach(b=>{
+  if(b) b.onclick=e=>{e.preventDefault();modal.style.display="flex";};
+});
+document.querySelector(".close").onclick=()=>modal.style.display="none";
+window.onclick=e=>{if(e.target==modal)modal.style.display="none";};
+</script>
 
-portfolioItems.forEach(item => {
-  item.addEventListener("click", () => {
-    modalImage.src = item.getAttribute("data-img");
-    modalTitle.textContent = item.getAttribute("data-title");
-    modalDesc.textContent = item.getAttribute("data-desc");
-    portfolioModal.style.display = "flex";
+<script>
+// Modal portfolio
+const pModal=document.getElementById("portfolioModal");
+document.querySelectorAll(".portfolio-item").forEach(item=>{
+  item.addEventListener("click",()=>{
+    document.getElementById("modalImage").src=item.getAttribute("data-img");
+    document.getElementById("modalTitle").textContent=item.getAttribute("data-title");
+    document.getElementById("modalDesc").textContent=item.getAttribute("data-desc");
+    pModal.style.display="flex";
   });
 });
+document.querySelector(".closePortfolio").onclick=()=>pModal.style.display="none";
+window.addEventListener("click",e=>{if(e.target==pModal)pModal.style.display="none";});
+</script>
 
-closePortfolio.onclick = function() {
-  portfolioModal.style.display = "none";
-}
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felipe Borges | Desenvolvedor Web</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-window.addEventListener("click", function(e) {
-  if (e.target == portfolioModal) {
-    portfolioModal.style.display = "none";
-  }
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="grid-lines"></div>
+<div id="particles-js"></div>
+
+<header>
+  <div class="container">
+    <h2 class="logo">FB<span> / </span>CODE & DESIGN</h2>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="hero-tag-dot"></span>
+      Disponível para projetos
+    </div>
+    <h1>Seu site com<br><em>a sua essência!</em></h1>
+    <p>Criação de sites modernos, estratégicos e altamente responsivos — experiências digitais que destacam sua marca.</p>
+    <a href="#" class="btn" id="openModal">Solicitar Orçamento →</a>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+<div class="skills-strip">
+  <div class="skills-track">
+    <span><b>01</b> HTML & CSS</span>
+    <span><b>02</b> JavaScript</span>
+    <span><b>03</b> React</span>
+    <span><b>04</b> Responsive Design</span>
+    <span><b>05</b> UI / UX</span>
+    <span><b>06</b> Performance</span>
+    <span><b>07</b> SEO</span>
+    <span><b>08</b> Landing Pages</span>
+    <span><b>01</b> HTML & CSS</span>
+    <span><b>02</b> JavaScript</span>
+    <span><b>03</b> React</span>
+    <span><b>04</b> Responsive Design</span>
+    <span><b>05</b> UI / UX</span>
+    <span><b>06</b> Performance</span>
+    <span><b>07</b> SEO</span>
+    <span><b>08</b> Landing Pages</span>
+  </div>
+</div>
+
+<section id="sobre" class="section">
+  <div class="section-label">Sobre mim</div>
+  <h2>Desenvolvedor Front-End<br>focado em resultados</h2>
+  <div class="about-wrapper">
+    <div class="about-text reveal">
+      <p>Sou <strong>Felipe Borges</strong>, Desenvolvedor Front-End com foco em design moderno, performance e adaptação para <strong>WEB e MOBILE</strong>.<br><br>Crio experiências digitais que destacam sua marca ou perfil no mercado — unindo código limpo com visual impactante para que cada projeto entregue resultados reais.</p>
+    </div>
+    <div class="about-stats reveal">
+      <div class="stat-box"><div class="num">10+</div><div class="lbl">Projetos entregues</div></div>
+      <div class="stat-box"><div class="num">100%</div><div class="lbl">Responsivos</div></div>
+      <div class="stat-box"><div class="num">3+</div><div class="lbl">Anos de experiência</div></div>
+      <div class="stat-box"><div class="num">∞</div><div class="lbl">Suporte pós-entrega</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="section">
+  <div class="section-label">O que eu faço</div>
+  <h2>Serviços</h2>
+  <div class="cards">
+    <div class="card reveal">
+      <div class="card-icon">🎯</div>
+      <h3>Landing Pages</h3>
+      <p>Páginas estratégicas e focadas em conversão que transformam visitantes em clientes reais.</p>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">🏢</div>
+      <h3>Sites Institucionais</h3>
+      <p>Presença digital profissional e impactante que representa sua empresa com credibilidade.</p>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">🛒</div>
+      <h3>E-commerce</h3>
+      <p>Lojas virtuais modernas, otimizadas para vendas e com excelente experiência de compra.</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="section">
+  <div class="section-label">Trabalhos</div>
+  <h2>Portfólio</h2>
+  <div class="portfolio-grid">
+    <div class="portfolio-item reveal" data-img="images/projeto1.png" data-title="Site Institucional" data-desc="Site profissional para seu perfil no mercado, com apresentação de habilidades, identidade visual forte e navegação intuitiva.">
+      <img src="images/projeto1.png" alt="Site Institucional">
+      <div class="portfolio-overlay"><div><h4>Site Institucional</h4><p>Ver projeto →</p></div></div>
+    </div>
+    <div class="portfolio-item reveal" data-img="images/projeto2.png" data-title="E-commerce Moderno" data-desc="Loja virtual responsiva e otimizada para vendas, com foco na experiência do cliente.">
+      <img src="images/projeto2.png" alt="E-commerce Moderno">
+      <div class="portfolio-overlay"><div><h4>E-commerce Moderno</h4><p>Ver projeto →</p></div></div>
+    </div>
+    <div class="portfolio-item reveal" data-img="images/projeto3.png" data-title="Administração na WEB" data-desc="Site com sistema completo de administração para sua organização financeira, social ou profissional — com objetivo de facilitar sua rotina!">
+      <img src="images/projeto3.png" alt="Administração na WEB">
+      <div class="portfolio-overlay"><div><h4>Administração na WEB</h4><p>Ver projeto →</p></div></div>
+    </div>
+    <div class="portfolio-item reveal" data-img="images/projeto4.png" data-title="Projeto Empresarial" data-desc="Website desenvolvido sob medida para representar da melhor forma seu empreendimento, alinhando performance, design e identidade da marca.">
+      <img src="images/projeto4.png" alt="Projeto Empresarial">
+      <div class="portfolio-overlay"><div><h4>Projeto Empresarial</h4><p>Ver projeto →</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="cta">
+  <div class="cta-glow"></div>
+  <div class="section-label" style="justify-content:center">Próximo passo</div>
+  <h2>Vamos criar seu projeto?</h2>
+  <p>Transforme sua ideia em um site que converte. Orçamento sem compromisso.</p>
+  <a href="#" class="btn-dark" id="openModal2">Fale Comigo →</a>
+</section>
+
+<footer>
+  <p>© 2026 Felipe Borges — Todos os direitos reservados</p>
+  <div class="footer-dot"></div>
+</footer>
+
+<!-- Modal Contato -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Entre em Contato</h2>
+    <p class="modal-subtitle">Escolha seu canal preferido</p>
+    <div class="contact-links">
+      <a href="https://wa.me/5551996048894" target="_blank"><span class="link-icon">💬</span> WhatsApp</a>
+      <a href="https://instagram.com/lipexcyber" target="_blank"><span class="link-icon">📸</span> Instagram</a>
+      <a href="mailto:felipecamposborgesinf@gmail.com"><span class="link-icon">✉️</span> E-mail</a>
+      <a href="https://www.linkedin.com/in/felipe-campos-borges-7ba6b517b/" target="_blank"><span class="link-icon">💼</span> LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Portfolio -->
+<div id="portfolioModal" class="modal">
+  <div class="modal-content portfolio-modal">
+    <span class="closePortfolio">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <div class="portfolio-modal-body">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+particlesJS("particles-js",{particles:{number:{value:55},color:{value:"#00e5ff"},shape:{type:"circle"},opacity:{value:.4},size:{value:2},line_linked:{enable:true,distance:160,color:"#00e5ff",opacity:.1,width:1},move:{enable:true,speed:1.2}},interactivity:{events:{onhover:{enable:true,mode:"repulse"},onclick:{enable:true,mode:"push"}}},retina_detect:true});
+</script>
+
+<script>
+// Cursor
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function animCursor(){
+  cur.style.left=mx+'px';cur.style.top=my+'px';
+  rx+=(mx-rx)*.14;ry+=(my-ry)*.14;
+  ring.style.left=rx+'px';ring.style.top=ry+'px';
+  requestAnimationFrame(animCursor);
+})();
+document.querySelectorAll('a,button,.portfolio-item,.card,.stat-box').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='16px';cur.style.height='16px';ring.style.width='48px';ring.style.height='48px';ring.style.opacity='.85';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='34px';ring.style.height='34px';ring.style.opacity='.5';});
 });
+</script>
+
+<script>
+// Scroll reveal
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+
+<script>
+// Modal contato
+const modal=document.getElementById("contactModal");
+[document.getElementById("openModal"),document.getElementById("openModal2")].forEach(b=>{
+  if(b) b.onclick=e=>{e.preventDefault();modal.style.display="flex";};
+});
+document.querySelector(".close").onclick=()=>modal.style.display="none";
+window.onclick=e=>{if(e.target==modal)modal.style.display="none";};
+</script>
+
+<script>
+// Modal portfolio
+const pModal=document.getElementById("portfolioModal");
+document.querySelectorAll(".portfolio-item").forEach(item=>{
+  item.addEventListener("click",()=>{
+    document.getElementById("modalImage").src=item.getAttribute("data-img");
+    document.getElementById("modalTitle").textContent=item.getAttribute("data-title");
+    document.getElementById("modalDesc").textContent=item.getAttribute("data-desc");
+    pModal.style.display="flex";
+  });
+});
+document.querySelector(".closePortfolio").onclick=()=>pModal.style.display="none";
+window.addEventListener("click",e=>{if(e.target==pModal)pModal.style.display="none";});
 </script>
 
 </body>
